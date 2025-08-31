@@ -1,0 +1,10 @@
+- name: Deploy My App2
+  hosts: localhost
+  tasks:
+    - name: Run Docker container
+      docker_container:
+        name: my-app2
+        image: my-app2:latest
+        state: started
+        ports:
+          - "8081:80"
